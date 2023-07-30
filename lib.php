@@ -22,6 +22,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+use theme_imtpn\local\utils;
 use theme_imtpn\mur_pedagogique;
 
 /**
@@ -42,7 +43,6 @@ function theme_imtpn_albi_carmaux_pluginfile($course, $cm, $context, $filearea, 
         $options);
 }
 
-
 /**
  * Fix issue with notloggedin class
  *
@@ -53,5 +53,5 @@ function theme_imtpn_albi_carmaux_pluginfile($course, $cm, $context, $filearea, 
  * @param $page
  */
 function theme_imtpn_albi_carmaux_page_init($page) {
-    mur_pedagogique::set_additional_page_classes($page);
+    utils::add_body_additional_classes($page);
 }
